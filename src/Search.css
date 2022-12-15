@@ -1,0 +1,75 @@
+.search__input {
+  display: flex;
+  /*if you didn't use dispaly flex , then icons and search box won't be 
+    be ate same level  */
+  align-items: center;
+  border: 1px solid lightgray;
+  /* justify-content: center; */
+  height: 30px;
+  padding: 10px 20px;
+  /* perfect curved 👇 999 px  */
+  border-radius: 999px;
+  /*  👇 75% width of view screen */
+  width: 75vw;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 560px;
+}
+
+.search__input > input {
+  /*  this flex 1 will make the input
+        to cover most of the space inside 
+        that curved box  👇*/
+  flex: 1;
+  padding: 10px 20px;
+  /* by defaul the search box will have the border 
+ so  did border none and it look way more cooler  */
+  border: none;
+  /*  but still when you try to write in input
+ you will see something like nasty blue border or 
+ box */
+  /* we do focus and put ooutline-witdh as zero  */
+}
+
+.search__input > input:focus {
+  /* this outline width is like boolean  */
+  outline-width: 0;
+}
+
+.search__inputIcon {
+  /* making the search symbol look little cooeler  */
+  color: gray;
+}
+
+.search__buttons {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.search__buttons button {
+  margin: 5px;
+  padding: 7px 15 px;
+  background-color: #f8f8f8;
+  border: 1px solid white;
+  /* material ui always make your text capitals ,we don't want that  */
+  /* this 👇👇  will make it in lower case */
+  text-transform: inherit;
+
+  background-color: #fee2f8;
+  background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
+}
+/*  this is the technique to add some hover effects */
+.search__buttons button:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: #d5fefd;
+  background-image: linear-gradient(315deg, #d5fefd 0%, #fffcff 74%);
+  /* this background image will add some small shiny look on button  */
+  background-image: -webkit-repeating-linear-gradient(top, #f8f8f8, #f1f1f1);
+  color: #222;
+  border: 1px solid #c6c6c6;
+}
+
+.search__buttonsHidden {
+  display: none !important ;
+}

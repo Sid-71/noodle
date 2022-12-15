@@ -1,0 +1,48 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
+}
+.home__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  /*  20 px  for top and bottom and 30px for left and right */
+  align-items: center;
+}
+
+.home__header a {
+  margin-right: 20px;
+  text-decoration: inherit;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 15px;
+}
+
+.home__header a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.home__headerRight {
+  display: flex;
+  align-items: center;
+  /* if you didn't use algin items , then the image would and others icons go out of line  */
+  justify-content: space-between;
+  min-width: 13vw;
+}
+.home__headerRight > .MuiSvgIcon-root {
+  margin-right: 20px;
+}
+
+.home__body {
+  flex: 1;
+  display: flex;
+  margin-top: 6%;
+  flex-direction: column;
+  /*  flex direction   will make it at center   */
+}
+
+.home__body > img {
+  object-fit: contain;
+  height: 250px;
+}
